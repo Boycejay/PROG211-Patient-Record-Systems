@@ -1,0 +1,147 @@
+Patient Record Management System
+
+Module: PROG211 – Object-Oriented Programming 1
+Domain: Health
+Language: Python
+Development environment: PyCharm
+
+1. Project Overview
+
+The Patient Record Management System is a simple, menu-driven Python application created for an introductory object-oriented programming assignment. It demonstrates how classes, objects, methods, and lists can be used to manage basic patient and doctor records.
+
+This is an educational prototype only. It is not intended for real clinical use. Use fictional sample data for demonstrations and testing.
+
+2. Features
+
+• Register a patient
+• Display all registered patients
+• Search for a patient by ID
+• Update a patient’s medical condition
+• Register a doctor
+• Display registered doctors
+• Assign a doctor to a patient
+• Display the patients assigned to a doctor
+• Display the total number of patients
+• Validate patient age and prevent duplicate patient/doctor IDs
+• Prevent duplicate entries in a doctor’s patient list
+
+3. Object-Oriented Programming Concepts
+
+Patient class
+
+Stores a patient’s ID, name, age, gender, medical condition, blood group, and assigned doctor.
+
+Methods include:
+
+• display_info() — displays a patient’s information
+• update_record() — updates the patient’s medical condition
+• assign_doctor() — assigns a doctor to the patient
+• show_total_patients() — a class method that displays the total number of patient objects created
+
+Doctor class
+
+Stores a doctor’s ID, name, specialization, department, and assigned patients.
+
+Methods include:
+
+• display_info() — displays a doctor’s information
+• add_patient() — adds a patient object to the doctor’s patient list
+• display_patients() — displays the patients assigned to the doctor
+
+Data structures and object interaction
+
+Python lists store multiple patient and doctor objects. When a doctor is assigned to a patient, the Patient object stores the Doctor object and the Doctor object stores the Patient object in its patient list.
+
+4. Requirements
+
+• Python 3
+• PyCharm or another Python IDE
+
+No third-party Python packages are required.
+
+5. How to Run the Program in PyCharm
+
+1. Download or clone this repository to your computer.
+2. Open PyCharm.
+3. Choose File → Open and select the project folder.
+4. Open patient_record_system.py.
+5. Click the green Run button, or right-click the file and choose Run ‘patient_record_system’.
+6. Use the numbered menu in the Run window. Enter a menu number when prompted.
+
+6. Example Run
+
+A sample interaction may look like this:
+
+PATIENT RECORD MANAGEMENT SYSTEM
+1. Add Patient
+2. Display All Patients
+3. Search Patient
+4. Update Patient Record
+5. Add Doctor
+6. Display Doctors
+7. Assign Doctor to Patient
+8. Show Total Patients
+9. Display Doctor's Patients
+10. Exit
+Enter your choice: 1
+
+Enter Patient ID: P001
+Enter Patient Name: John Kamara
+Enter Age: 25
+Enter Gender: Male
+Enter Medical Condition: Malaria
+Enter Blood Group: O+
+
+Patient added successfully!
+
+The names and details above are fictional examples. All data is held in memory while the program is running. Records are not saved after the program exits.
+
+7. Digital Public Goods Considerations
+
+• Open and reusable code: The Python source is organized and commented so learners can study and adapt it.
+• Privacy: Demonstrations should use fictional data, not real patient records.
+• Modularity: Separate classes and functions make the program easier to understand and extend.
+• Accessibility: A simple text-based menu keeps the program lightweight and does not require additional libraries.
+
+This project is a classroom prototype and does not implement production security features such as authentication, encryption, role-based access, or permanent database storage.
+
+8. Testing
+
+|Test|Action                         |Expected result                                  |
+|----|-------------------------------|-------------------------------------------------|
+|1   |Add a patient                  |Patient is added successfully                    |
+|2   |Display all patients           |Registered patients are displayed                |
+|3   |Search using a valid patient ID|Matching patient is displayed                    |
+|4   |Search using an unknown ID     |“Patient not found” message appears              |
+|5   |Update a patient’s condition   |Updated condition is used for the current session|
+|6   |Add a doctor                   |Doctor is added successfully                     |
+|7   |Assign a doctor to a patient   |The patient and doctor are linked                |
+|8   |Display a doctor’s patients    |Assigned patients are displayed                  |
+|9   |Show total patients            |Class method displays the patient count          |
+|10  |Enter invalid age or menu input|A validation or error message appears            |
+
+Run these tests yourself and record the actual results. Capture screenshots from PyCharm for the assignment evidence.
+
+9. Project Files
+
+PROG211_Patient_Record_System/
+├── patient_record_system.py
+├── README.md
+└── PROG211_Patient_Record_Management_System_Report.docx
+
+The report file is optional for the repository if your lecturer requests it separately. Check the submission instructions before uploading documents.
+
+10. Limitations and Future Improvements
+
+• Records are temporary and are lost when the program exits.
+• There is no login or user-role system.
+• The program uses a command-line interface.
+• Future versions could add a database, authentication, stronger input validation, automated unit tests, and a graphical user interface.
+
+11. Author
+
+Student project for PROG211 – Object-Oriented Programming 1.
+
+12. License
+
+No license has been selected for this project yet. If you want others to reuse or distribute the code, choose a license and add its license file after confirming the requirements with your lecturer.
